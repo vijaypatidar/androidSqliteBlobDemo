@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileListFragment">
+
+    <fragment
+        android:id="@+id/addProfile"
+        android:name="com.vkpapps.sqlitedemo.ui.fragments.NewProfileFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="Add profile"/>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.vkpapps.sqlitedemo.ui.fragments.ViewProfileFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second"/>
+    <fragment
+        android:id="@+id/profileListFragment"
+        android:name="com.vkpapps.sqlitedemo.ui.fragments.ProfileListFragment"
+        android:label="ProfileListFragment" />
+</navigation>
