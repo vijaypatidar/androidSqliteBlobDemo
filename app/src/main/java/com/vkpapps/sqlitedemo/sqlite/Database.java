@@ -94,4 +94,8 @@ public class Database extends SQLiteOpenHelper {
         }
         insertStmt.executeInsert();
     }
+
+    public void removeProfile(int id) {
+        getWritableDatabase().execSQL("delete from profiles where id ="+id);
+    }
 }

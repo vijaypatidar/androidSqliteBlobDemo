@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,6 +40,7 @@ public class ProfileListFragment extends Fragment {
 
         RecyclerView profileList = view.findViewById(R.id.profileList);
         profileList.setLayoutManager(new LinearLayoutManager(requireContext()));
+        profileList.setItemAnimator(new DefaultItemAnimator());
         adapter = new ProfileAdapter(profiles, requireContext().getDir("profilesFetched", Context.MODE_PRIVATE).getPath());
         profileList.setAdapter(adapter);
 
